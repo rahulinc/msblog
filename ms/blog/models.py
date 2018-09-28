@@ -10,8 +10,6 @@ class travel(models.Model):
 	text = models.TextField()
 	created_date = models.DateTimeField(default=timezone.now)
 	published_date = models.DateTimeField(blank=True, null=True)
-	card_img = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
-	article_pic = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
 
 	class Meta:
 		verbose_name_plural = "travel"
@@ -30,8 +28,6 @@ class fashion(models.Model):
 	text = models.TextField()
 	created_date = models.DateTimeField(default=timezone.now)
 	published_date = models.DateTimeField(blank=True, null=True)
-	card_img = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
-	article_pic = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
 
 	class Meta:
 		verbose_name_plural = "fashion"
@@ -51,8 +47,6 @@ class lifestyle(models.Model):
 	text = models.TextField()
 	created_date = models.DateTimeField(default=timezone.now)
 	published_date = models.DateTimeField(blank=True, null=True)
-	card_img = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
-	article_pic = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
 
 	class Meta:
 		verbose_name_plural = "lifestyle"
@@ -71,8 +65,6 @@ class music(models.Model):
 	text = models.TextField()
 	created_date = models.DateTimeField(default=timezone.now)
 	published_date = models.DateTimeField(blank=True, null=True)
-	card_img = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
-	article_pic = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
 
 	class Meta:
 		verbose_name_plural = "music"
@@ -92,8 +84,7 @@ class art(models.Model):
 	text = models.TextField()
 	created_date = models.DateTimeField(default=timezone.now)
 	published_date = models.DateTimeField(blank=True, null=True)
-	card_img = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
-	article_pic = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
+
 
 	class Meta:
 		verbose_name_plural = "art"
@@ -113,8 +104,7 @@ class glamour(models.Model):
 	text = models.TextField()
 	created_date = models.DateTimeField(default=timezone.now)
 	published_date = models.DateTimeField(blank=True, null=True)
-	card_img = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
-	article_pic = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
+
 
 	class Meta:
 		verbose_name_plural = "glamour"
@@ -135,8 +125,6 @@ class sliderCard(models.Model):
 	text = models.TextField()
 	created_date = models.DateTimeField(default=timezone.now)
 	published_date = models.DateTimeField(blank=True, null=True)
-	card_img = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
-	article_pic = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
 
 	class Meta:
 		verbose_name_plural = "sliderCard"
@@ -158,8 +146,7 @@ class trending(models.Model):
 	text = models.TextField()
 	created_date = models.DateTimeField(default=timezone.now)
 	published_date = models.DateTimeField(blank=True, null=True)
-	card_img = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
-	article_pic = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
+
 
 
 	class Meta:
@@ -180,8 +167,7 @@ class blocks(models.Model):
 	text = models.TextField()
 	created_date = models.DateTimeField(default=timezone.now)
 	published_date = models.DateTimeField(blank=True, null=True)
-	card_img = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
-	article_pic = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
+
 
 	class Meta:
 		verbose_name_plural = "blocks"
@@ -201,8 +187,7 @@ class topStories(models.Model):
 	text = models.TextField()
 	created_date = models.DateTimeField(default=timezone.now)
 	published_date = models.DateTimeField(blank=True, null=True)
-	card_img = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
-	article_pic = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
+
 
 	class Meta:
 		verbose_name_plural = "topStories"
@@ -223,8 +208,7 @@ class mostPopular(models.Model):
 	text = models.TextField()
 	created_date = models.DateTimeField(default=timezone.now)
 	published_date = models.DateTimeField(blank=True, null=True)
-	card_img = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
-	article_pic = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
+
 
 	class Meta:
 		verbose_name_plural = "mostPopular"
