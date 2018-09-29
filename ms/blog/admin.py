@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import travel
+from .models import stories
 from .models import fashion
 from .models import lifestyle
 from .models import music
@@ -15,7 +15,7 @@ from .models import topStories
 from .models import mostPopular
 
 
-admin.site.register(travel)
+admin.site.register(stories)
 admin.site.register(fashion)
 admin.site.register(lifestyle)
 admin.site.register(music)

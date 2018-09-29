@@ -4,7 +4,7 @@ from django.utils import timezone
 #The blog models are defined here
 
 #Model for travel category
-class travel(models.Model):
+class stories(models.Model):
 	author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
 	title = models.CharField(max_length=200)
 	text = models.TextField()
@@ -12,7 +12,7 @@ class travel(models.Model):
 	published_date = models.DateTimeField(blank=True, null=True)
 
 	class Meta:
-		verbose_name_plural = "travel"
+		verbose_name_plural = "stories"
 
 	def publish(self):
 		self.published_date = timezone.now()

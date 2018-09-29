@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+	{% load static %}
+	<title>maistory</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Akronim|Dancing+Script|Dr+Sugiyama|Great+Vibes|Montez|Rouge+Script" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Akronim|Allura|Charmonman|Clicker+Script|Finger+Paint|Montez|Mr+De+Haviland|Qwigley|Srisakdi|Stalemate" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Miss+Fajardose" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="{% static 'frameworks/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'frameworks/swiper.css' %}">
+	<link rel="stylesheet" href="{% static 'fonts/ionicons.css' %}">
+	<link rel="stylesheet" href="{% static 'common/styles.css' %}">
+	<link rel="stylesheet" href="{% static 'common/animate.css' %}">
+
+<!-- 	Js files -->
+	<script src="{% static 'common/scripts.js' %}"></script> 
+	<script src="{% static 'frameworks/swiper.js' %}"></script> 
+	<script src="{% static 'frameworks/bootstrap.min.js' %}"></script> 
+	<script src="{% static 'frameworks/jquery-3.2.1.min.js' %}"></script> 
+	<script src="{% static 'frameworks/tether.min.js' %}"></script> 
+
+
+
+<!-- 	Animation Library Animate.css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	
+	
+</head>
+<body>
+	
+	<header>
+		<a class="logo" href="#"><img src="static/images/logo-white.png" alt="Logo"></a>
+		
+		<div class="right-area">
+			<form class="src-form">
+				<button type="submit"><i class="ion-search"></i></a></button>
+				<input type="text" placeholder="Search here">
+			</form><!-- src-form -->
+		</div><!-- right-area -->
+		
+		<a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
+		
+		<ul class="main-menu" id="main-menu">
+			<li><a href="index.html">Home</a></li>
+			<li class="drop-down"><a href="#!">Sport<i class="ion-arrow-down-b"></i></a>
+				<ul class="drop-down-menu drop-down-inner">
+					<li><a href="#">PAGE 1</a></li>
+					<li><a href="#">PAGE 2</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Travel</a></li>
+			<li><a href="#">Beauty</a></li>
+			<li><a href="#">Music</a></li>
+			<li><a href="#">Art</a></li>
+			<li><a href="#">Fashion</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+		
+		<div class="clearfix"></div>
+	</header>
+	
+	
+	<div class="slider-main h-800x h-sm-auto pos-relative pt-95 pb-25">
+		<div class="img-bg bg-16 bg-layer-6"></div>
+		<div class="container-fluid h-100 mt-xs-50">
+			<div class="dplay-tbl">
+				<div class="dplay-tbl-cell">
+					<div class="row">
+						<div class="col-lg-1"></div>
+						<div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+						
+							<div class="bg-white p-40 psm-30">
+								<h5 class="color-ash"><b>ScareTime</b>
+								<h1 class="mt-20 lh-1-2"><b>Gather Courage, you are gonna need it to read this</b></h1>
+							
+							</div><!-- bg-white -->
+						</div><!-- col-lg-4 -->
+					</div><!-- row -->
+				</div><!-- dplay-tbl-cell -->
+			</div><!-- dplay-tbl -->
+		</div><!-- container -->
+	</div><!-- slider-main -->
+	
+	{% for post in posts %}
+	<section class="bg-1-white ptb-0">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-1"></div>
+				<div class="col-md-12 col-lg-8 ptb-50 pr-30 pr-md-15">
+					
+
+					<h3 class="mtb-10"><b>"{{post.title}}</b></h3>
+										<div class="row">
+						<div class="col-sm-12 col-md-6">
+							
+							<div class="sided-70x">
+								<div class="s-left">
+									<img src="images/profile.jpg" alt="">
+								</div><!-- s-left-->
+								
+								<div class="s-right">
+									<p class=" color-ash"><b>Author: {{post.author}}</b></p>
+									<p class="color-ash"><b>Published: {{ post.published_date }}</b></p>
+								</div>
+							</div><!-- sided-80x-->
+						</div><!-- col-md-6-->
+						
+						<div class="col-sm-12 col-md-6">
+							<ul class="color-ash lh-70 text-right text-sm-left list-a-plr-10 font-13">
+								<li><b>SHARE</b></li>
+								<li><a href="#"><i class="color-facebook ion-social-facebook"></i></a></li>
+								<li><a href="#"><i class="color-twitter ion-social-twitter"></i></a></li>
+								<li><a href="#"><i class="color-google ion-social-google"></i></a></li>
+							</ul>
+						</div><!-- col-md-6-->
+					</div><!-- row-->
+					
+					<p class="mt-20 mt-sm-10">{{post.text|linebreaksbr}}</p>
+					
+					
+					<ul class="tag mtb-50">
+					
+						<li><a href="#"><b>Manual</b></a></li>
+						<li><a href="#"><b>Liberty</b></a></li>
+						<li><a href="#"><b>InterPretitaion</b></a></li>
+					</ul>
+					
+
+					
+					<h4 class="mb-30 mt-20 clearfix"><b>Post Comment</b></h4>
+					
+					<div class="row">
+						<div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
+							<form class="form-block form-h-55 form-plr-20 form-bg-white">
+								<div class="row">
+									<div class="col-sm-6 mb-30">
+										<input type="text" placeholder="Name">
+									</div><!-- col-sm-6-->	
+									
+									<div class="col-sm-6 mb-30">
+										<input type="text" placeholder="Email">
+									</div><!-- col-sm-6-->
+									
+									<div class="col-sm-12 mb-30">
+										<textarea class="ptb-20 min-h-200x" placeholder="Comment"></textarea>
+									</div><!-- col-sm-12-->
+									
+								</div><!-- row-->
+								<button class="btn-b-lg btn-brdr-grey plr-25 color-ash" type="submit"><b>Post Comment</b></button>
+								<br>
+							</form>
+						</div><!-- col-sm-6-->	
+					</div><!-- row-->	
+					
+					
+
+					
+					
+					
+					
+				</div><!-- col-sm-9 -->
+				
+
+			</div><!-- row -->
+		</div><!-- container -->
+	</section>
+	{% endfor %}
+	
+	
+	<footer class="bg-191 color-ash pt-50 pb-20 text-left center-sm-text">
+		
+		<div class="container-fluid">
+			<div class="row">
+			
+				<div class="col-lg-1"></div>
+				
+				<div class="col-md-4 col-lg-4 mb-30 centerAlign">
+					<div class="card h-100">
+						<div class="dplay-tbl">
+							<div class="dplay-tbl-cell">
+							
+								<form class="form-block form-brdr-b mx-w-400x m-auto">
+						
+									<input class="color-white ptb-15 center-sm-text" type="text" placeholder=" Your Email">
+									<button class="mt-30 btn-brdr-grey color-ash w-100 text-center" type="submit">SUBSCRIBE</button>
+								
+								</form>
+								<ul class="list-a-plr-10 mt-40">
+									<li><a href="#"><i class="ion-social-facebook"></i></a></li>
+									<li><a href="#"><i class="ion-social-twitter"></i></a></li>
+									<li><a href="#"><i class="ion-social-youtube"></i></a></li>
+								</ul>
+								<p class="color-ash mt-25">Copyright 2018 | All rights reserved by maistory</p>
+
+								
+							</div><!-- dplay-tbl-cell -->
+						</div><!-- dplay-tbl -->
+					</div><!-- card -->
+				</div><!-- col-lg-4 col-md-6 -->
+				
+				<div class="col-md-4 col-lg-4 mb-30">
+					<div class="card h-100">
+						<div class="dplay-tbl">
+							<div class="dplay-tbl-cell">
+							
+
+							</div><!-- dplay-tbl-cell -->
+						</div><!-- dplay-tbl -->
+					</div><!-- card -->
+				</div><!-- col-lg-4 col-md-6 -->
+				
+				<div class="col-md-4 col-lg-2 mb-30 text-left">
+					<div class="card h-100">
+						<div class="dplay-tbl">
+							<div class="dplay-tbl-cell">
+								<a href="#"><img src="static/images/logo-white.png"></a>
+								
+								<div class="mt-20"><h4 id="designerTitle">by rahul patil</h4></div>
+								
+
+							</div><!-- dplay-tbl-cell -->
+						</div><!-- dplay-tbl -->
+					</div><!-- card -->
+				</div><!-- col-lg-4 col-md-6 -->
+				
+			</div><!-- row -->
+		</div><!-- container -->
+	</footer>
+	
+	<!-- SCIPTS -->
+	
+	<script src="plugin-frameworks/jquery-3.2.1.min.js"></script>
+	
+	<script src="plugin-frameworks/bootstrap.min.js"></script>
+	
+	<script src="plugin-frameworks/swiper.js"></script>
+	
+	
+	<script src="common/scripts.js"></script>
+	
+</body>
+</html>

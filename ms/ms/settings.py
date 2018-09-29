@@ -24,7 +24,6 @@ SECRET_KEY = 'i_5lkxi*m9c96cl9f0$_(zk3_vs(#d83*7%7hga$0xgd(zl(nm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-TEMPLATE_DEBUG = False
 ALLOWED_HOSTS = ["*"]
 
 
@@ -55,7 +54,7 @@ ROOT_URLCONF = 'ms.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,7 +118,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, '/home/rahulinc.pythonanywhere.com/ms/static')
-MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(BASE_DIR, '/home/rahulinc.pythonanywhere.com/ms/static')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
